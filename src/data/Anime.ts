@@ -9,7 +9,6 @@ import naruto from '../assets/images/naruto.jpg'
 
 import onepunch from '../assets/images/onepunch.jpg'
 import bleach from '../assets/images/bleach.jpg'
-import chouji from '../assets/images/chouji.jpg'
 import chainsaw from '../assets/images/chainsaw.jpg'
 import deathnote from '../assets/images/deathnote.jpg'
 import onepiece from '../assets/images/one piece.jpg'
