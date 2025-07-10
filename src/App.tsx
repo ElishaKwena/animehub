@@ -1,18 +1,14 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import ThemeDebug from './components/ThemeDebug';
+// import React, { useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+// import Navbar from './components/Navbar';
+// import ThemeDebug from './components/ThemeDebug';
 import ErrorBoundary from './components/ErrorBoundary';
-import ProtectedRoute from './components/ProtectedRoute';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
 import { ThemeProvider } from './components/ThemeProvider';
 
 import LandingPage from './pages/LandingPage';
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   return (
     <ThemeProvider>
