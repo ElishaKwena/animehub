@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import ThemeToggleButton from '../components/ThemeToggleButton';
 
 import CallToAction from './MaterialUI/Buttons/CallToAction';
 
