@@ -1,0 +1,63 @@
+:root {
+    --neon_purple: theme('colors.neon_purple'); /* #3b82f6 */
+    --fashion_pink: theme('colors.fashion_pink'); /* #10b981 */
+  }
+  
+
+.tag{
+    position: absolute;
+    top: -15px;
+    right: 10px;
+    z-index: 1;
+    width: 50px;
+    height: 60px;
+    background-color: var(--neon_purple);
+    border-top-right-radius: 5px;
+    opacity:0;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+}
+.tag-items{
+    position: relative;
+    height: 100%;
+}
+.tag-items::before {
+    position: absolute;
+    left: -12px;       /* Adjust position as needed */
+    top: 0%;
+    transform: rotate(2700deg);
+    content: '';
+    z-index: -100;
+    
+    /* Right-angled triangle */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 12px 0 0;  /* Creates right-angled triangle */
+    border-color: var(--neon_purple) transparent transparent transparent;
+  }
+.tag-items::after{
+    position:absolute;
+    top:42.5px;
+    transform: rotate(44.5deg);
+    width: 35px;
+    height:35px;
+    left: 7.7px;
+    content:'';
+    z-index: -10;
+    background-color: var(--neon_purple);
+    /* background-color: red; */
+}
+.card-contents{
+    opacity:0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.popularcard:hover .tag{
+    opacity:1;
+    visibility: visible;
+}
+.popularcard:hover .card-contents{
+    opacity:1;
+    visibility: visible;
+}
