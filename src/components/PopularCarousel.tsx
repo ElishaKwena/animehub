@@ -1,6 +1,10 @@
 import React from 'react';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+import 'swiper/swiper-bundle.css'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+
 import { popularAnime } from '../data/Anime';
 import Popular from './Popular';
 
