@@ -1,1 +1,6 @@
-/*    /index.html   200
+# Legacy URL redirects
+/old-path    /new-path    301
+/blog/*      /news/*      302
+
+# Feature flags
+/experimental    /index.html?exp=true   200
