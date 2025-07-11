@@ -62,7 +62,6 @@ const Signup: React.FC = () => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         console.log(formData);
-        console.log("elisha")
     }
 
 
