@@ -5,7 +5,6 @@ import ROUTE_PATHS from '../../routes/paths';
 import Authbackground from '../../components/MaterialUI/Background/Authbackground';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 import flame from '../../assets/icons/flame.png'
 import google from '../../assets/icons/google.png'
@@ -52,9 +51,6 @@ const Signup: React.FC = () => {
     
     });
 
-    const [showPassword, setShowPassword] = useState(false);
-    const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-
     const handlechange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setFormData(prev => ({
@@ -65,7 +61,8 @@ const Signup: React.FC = () => {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(formData)
+        console.log(formData);
+        console.log("elisha")
     }
 
 
@@ -171,37 +168,39 @@ const Signup: React.FC = () => {
                                             transition-all duration-500
                                         "/>
                                 </div>
-                                <div className="inputbox w-full relative">
+                                <div className="inputbox w-full">
                                     <input
-                                        type={showPassword ? "text" : "password"}
+                                        type="password"
                                         name='password'
                                         value={formData.password}
                                         onChange={handlechange}
                                         placeholder="Create password"
-                                        className="w-full p-3 border-2 border-frost bg-white/40 text-fashion_pink rounded-md placeholder:text-white focus:border-fashion_pink focus:outline-none focus:shadow-none focus:ring-0 transition-all duration-500"
-                                    />
-                                    <span
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
-                                        onClick={() => setShowPassword((prev) => !prev)}
-                                    >
-                                        <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
-                                    </span>
+                                        className="
+                                            w-full p-3 border-2 border-frost bg-white/40 text-fashion_pink rounded-md
+                                            placeholder:text-white
+                                            focus:border-fashion_pink
+                                            focus:outline-none
+                                            focus:shadow-none
+                                            focus:ring-0
+                                            transition-all duration-500
+                                        "/>
                                 </div>
-                                <div className="inputbox w-full relative">
+                                <div className="inputbox w-full">
                                     <input
-                                        type={showConfirmPassword ? "text" : "password"}
+                                        type="password"
                                         name='confirmPassword'
                                         value={formData.confirmPassword}
                                         onChange={handlechange}
                                         placeholder="Confirm password"
-                                        className="w-full p-3 border-2 border-frost bg-white/40 text-fashion_pink rounded-md placeholder:text-white focus:border-fashion_pink focus:outline-none focus:shadow-none focus:ring-0 transition-all duration-500"
-                                    />
-                                    <span
-                                        className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer"
-                                        onClick={() => setShowConfirmPassword((prev) => !prev)}
-                                    >
-                                        <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
-                                    </span>
+                                        className="
+                                            w-full p-3 border-2 border-frost bg-white/40 text-fashion_pink rounded-md
+                                            placeholder:text-white
+                                            focus:border-fashion_pink
+                                            focus:outline-none
+                                            focus:shadow-none
+                                            focus:ring-0
+                                            transition-all duration-500
+                                        "/>
                                 </div>
                                 <div className="inputbox w-full">
                                     <button className='bg-neon_purple w-full font-extrabold text-white rounded-md p-2 transition-all duration-300 hover:bg-fashion_pink  hover:shadow-lg'>Create account</button>
