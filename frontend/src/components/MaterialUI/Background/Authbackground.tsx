@@ -57,13 +57,13 @@ const Authbackground: React.FC = () => {
   ];
 
   // Background colors
-  const bgColors = [
-    'bg-coffee', 
-    'bg-candy', 
-    'bg-neon_purple', 
-    'bg-fashion_pink', 
-    'bg-neon_blue'
-  ];
+  // const bgColors = [
+  //   'bg-coffee', 
+  //   'bg-candy', 
+  //   'bg-neon_purple', 
+  //   'bg-fashion_pink', 
+  //   'bg-neon_blue'
+  // ];
 
   return (
     <main className="w-full max-h-screen relative overflow-hidden">
