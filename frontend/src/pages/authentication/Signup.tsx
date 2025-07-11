@@ -69,7 +69,7 @@ const Signup: React.FC = () => {
     return(
         <>
             <div className="signup-div  w-full max-h-screen lg:h-screen absolute grid place-items-center z-50 rounded-xl">
-                <div className="overflow-auto lg:overflow-visible formdiv w-[98%] mx-auto lg:w-[70%] h-screen lg:h-[80vh] rounded-xl flex flex-col lg:flex-row items-center justify-between lg:backdrop-blur-lg lg:bg-white/20 lg:border lg:border-white/30 lg:shadow-2xl" >
+                <div className="overflow-auto lg:overflow-visible formdiv w-[98%] mx-auto lg:w-[70%] h-screen lg:h-[80vh] rounded-xl flex flex-col lg:flex-row items-center justify-between lg:backdrop-blur-sm lg:bg-white/10 lg:border lg:border-white/30 lg:shadow-2xl" >
                     {/* signup form left side */}
                     <div className="left w-full lg:w-1/2 h-full flex flex-col items-center justify-start lg:justify-center p-2 lg:p-4">
                         <div className="logo w-full">
