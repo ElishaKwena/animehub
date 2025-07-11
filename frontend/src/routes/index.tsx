@@ -5,6 +5,7 @@ import ProtectedRoute from '../components/ProtectedRoute';
 // Lazy load pages for better performance
 const Home = lazy(() => import('../pages/Home'));
 const Login = lazy(() => import('../pages/authentication/Login'));
+const Signup = lazy(() => import('../pages/authentication/Signup'));
 const Dashboard = lazy(() => import('../pages/Dashboard'));
 const LandingPage = lazy(() => import('../pages/LandingPage'));
 
@@ -15,13 +16,15 @@ const AppRoutes: React.FC = () => (
   <Suspense fallback={<div>Loading...</div>}>
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/login" element={<Login onLogin={() => {}} />} />
+     
+      <Route path="/login" element={<Login />} />
+      <Route path="/signup" element={<Signup />} />
       <Route
         path="/dashboard"
         element={
           <ProtectedRoute isAuthenticated={isAuthenticated}>
             <Dashboard />
+            <Home />
           </ProtectedRoute>
         }
       />

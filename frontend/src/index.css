@@ -7,6 +7,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --neon_purple: theme('colors.neon_purple'); /* #3b82f6 */
+  --fashion_pink: theme('colors.fashion_pink'); /* #10b981 */
+}
+
 @font-face {
   font-family: 'AltarGothicDemo';
   src: url('/fonts/AltarGothicDemo-Regular.otf') format('opentype');
@@ -251,4 +256,7 @@ section{
 
 .animation-delay-10000 {
   animation-delay: 10s;
+}
+ul li::marker {
+  color: var(--fashion_pink);
 }
