@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom';
 import ROUTE_PATHS from '../../routes/paths';
 import Authbackground from '../../components/MaterialUI/Background/Authbackground';
