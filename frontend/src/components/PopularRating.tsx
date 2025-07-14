@@ -4,9 +4,10 @@ import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons';
 
 interface PopularRatingProps{
     score:number;
+    size?: string; // tailwind text size, e.g. 'text-xl'
 }
 
-const PopularRating:React.FC<PopularRatingProps> = ({score}) => {
+const PopularRating:React.FC<PopularRatingProps> = ({score, size = "text-[12px]"}) => {
     const normalizedScore = Math.min(score, 10)/2;// converting to 0-5 scale
     const fullStars = Math.floor(normalizedScore);
     const hasHalfStar = normalizedScore % 1 >= 0.5;
@@ -15,12 +16,12 @@ const PopularRating:React.FC<PopularRatingProps> = ({score}) => {
         <>
             {[...Array(5)].map((_, index) => {
                 if (index < fullStars) {
-                    return <FontAwesomeIcon key={index} icon={faStar} className="text-sunflower text-sm font-bold" />;
+                    return <FontAwesomeIcon key={index} icon={faStar} className={`text-sunflower ${size} font-bold`} />;
                 }
                 if (index === fullStars && hasHalfStar) {
-                    return <FontAwesomeIcon key={index} icon={faStarHalfAlt} className="text-sunflower text-sm font-bold" />;
+                    return <FontAwesomeIcon key={index} icon={faStarHalfAlt} className={`text-sunflower ${size} font-bold`} />;
                 }
-                return <FontAwesomeIcon key={index} icon={faStar} className="text-frost text-sm font-bold " />;
+                return <FontAwesomeIcon key={index} icon={faStar} className={`text-frost ${size} font-bold `} />;
             })}
         </>
     )

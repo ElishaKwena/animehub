@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import ROUTE_PATHS from '../routes/paths';
+
 
 const Callaction:React.FC = () =>{
     return(
@@ -8,7 +11,7 @@ const Callaction:React.FC = () =>{
                 <h2 className="text-2xl lg:text-4xl font-bold text-white mb-4 font-anime">Ready to <span className="text-yellow-300">Go Plus Ultra</span>?</h2>
                 <p className="text-lg lg:text-xl text-indigo-100 mb-8 ">Join 1M+ weebs enjoying ad-free anime. Start your <strong>7-day free trial</strong> today!</p>
                 
-                <button className="relative px-12 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full text-lg shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-105 group">
+                <Link to={ROUTE_PATHS.home} className="relative px-12 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full text-lg shadow-lg hover:shadow-yellow-400/40 transition-all hover:scale-105 group">
                             <span className="relative z-10">Start Watching Now</span>
 
                           
@@ -16,7 +19,7 @@ const Callaction:React.FC = () =>{
 
                         
                             <div className="absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full animate-sparkle"></div>
-                </button>
+                </Link>
 
                 <div className="mt-6 flex items-center justify-center gap-2">
                     <span className="text-indigo-200 text-md">4.9/5 from 50K+ reviews</span>
