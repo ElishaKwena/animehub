@@ -3,8 +3,10 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import ProtectedRoute from '../components/ProtectedRoute';
 import MainLayout from '../components/MainLayout';
 
+
 // Lazy load pages for better performance
 const Home = lazy(() => import('../pages/mainpages/Home'));
+const Play = lazy(() => import ('../pages/mainpages/Play'));
 const Login = lazy(() => import('../pages/authentication/Login'));
 const Signup = lazy(() => import('../pages/authentication/Signup'));
 const Dashboard = lazy(() => import('../pages/Dashboard'));
@@ -18,6 +20,7 @@ const AppRoutes: React.FC = () => (
     <Routes>
       <Route element={<MainLayout />}>
         <Route path="/home" element={<Home />} />
+        <Route path="/play" element ={<Play/>}/>
         <Route
           path="/dashboard"
           element={

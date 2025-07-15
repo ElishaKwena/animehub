@@ -7,8 +7,8 @@ import { watching } from '../../data/Watching';
 
 const WatchinCaroussel: React.FC = () => {
   return (
-    <div className="w-full h-full relative">
-      <Carousel slide={true} indicators={true} className="h-full">
+    <div className="w-full h-full relative no-rounded-carousel">
+      <Carousel slide={true} indicators={true} className="h-full rounded-0">
         {watching.map((anime) => (
           <div key={anime.id} className="w-full h-full relative">
             {/* Image */}
@@ -20,7 +20,7 @@ const WatchinCaroussel: React.FC = () => {
               className="absolute inset-0 z-10 pointer-events-none"
               style={{
                 background: "linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 40%)",
-                borderRadius: "0.375rem"
+       
               }}
             />
             {/* Black-to-transparent gradient overlay */}
@@ -28,7 +28,7 @@ const WatchinCaroussel: React.FC = () => {
               className="absolute inset-0 z-10 pointer-events-none"
               style={{
                 background: "linear-gradient(to right, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.3) 65%, rgba(0,0,0,0) 100%)",
-                borderRadius: "0.375rem"
+                
               }}
             />
             {/* Title and details */}

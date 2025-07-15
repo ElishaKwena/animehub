@@ -15,7 +15,7 @@ import {groupcharts, currentPoll} from "../../data/Trendy";
 const RightSideBar:React.FC = () =>{
     return(
         <>
-        <div className="width-full flex flex-col gap-2 mt-0 bg-white dark:bg-dark900">
+        <div className="width-full flex flex-col gap-2 mt-0 bg-white dark:bg-black">
             <div className="trendyweek w-full flex flex-col">
                 <div className="top flex items-center justify-start gap-2">
                     <FontAwesomeIcon icon={faTrophy} className="text-sunflower h-6"/>

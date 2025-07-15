@@ -8,6 +8,7 @@ import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons';
 import MostPopular from '../../components/ContentsComponents/MostPopular';
 import WatchinCaroussel from '../../components/ContentsComponents/WatchinCaroussel';
 
+
 // top anime and recommendations
 import { top } from "../../data/Watching";
 import TopAnimeSection from '../../components/TopAnimeSection';
@@ -21,6 +22,9 @@ import { highSchoolAnime } from '../../data/Genres/Highschool';
 import { shonenAnime } from "../../data/Genres/Shonen";
 import { romanceAnime } from '../../data/Genres/Romance';
 import { actionAnime } from '../../data/Genres/Action';
+import { adventureAnime } from '../../data/Genres/Adventure';
+import {sciFiAnime} from '../../data/Genres/Sci-fi'
+import { sportsAnime } from '../../data/Genres/Sports';
 
 const Home: React.FC = () => {
     const {
@@ -58,7 +62,7 @@ const Home: React.FC = () => {
                 aria-label="Close sidebar overlay"
               />
             )}
-            <main className="w-full pt-[90px] lg:pt-[75px] min-h-screen bg-white dark:bg-dark900">
+            <main className="w-full pt-[90px] lg:pt-[75px] min-h-screen bg-white dark:bg-black">
                 <div className="flex flex-col lg:flex-row w-full h-full">
                     {/* left sidebar - visible on mobile if leftSidebarVisible, on desktop if sidebarsVisible */}
                     {(leftSidebarVisible || sidebarsVisible) && (
@@ -66,7 +70,7 @@ const Home: React.FC = () => {
                           className={
                             sidebarsVisible
                               ? 'hidden lg:block lg:w-[16%] h-auto lg:h-full overflow-y-auto scrollbar-hide'
-                              : `fixed top-[90px] left-0 z-40 w-3/4 max-w-xs h-full bg-white dark:bg-dark900 shadow-lg transition-transform duration-300 ease-in-out will-change-transform lg:hidden overflow-y-auto scrollbar-hide ${leftSidebarVisible ? 'translate-x-0' : '-translate-x-full'}`
+                              : `fixed top-[90px] left-0 z-40 w-3/4 max-w-xs h-full bg-white dark:bg-black shadow-lg transition-transform duration-300 ease-in-out will-change-transform lg:hidden overflow-y-auto scrollbar-hide ${leftSidebarVisible ? 'translate-x-0' : '-translate-x-full'}`
                           }
                           style={{
                             transform: leftSidebarVisible || sidebarsVisible ? 'translateX(0)' : 'translateX(-100%)',
@@ -78,7 +82,7 @@ const Home: React.FC = () => {
                     )}
 
                     {/* main contents */}
-                    <div className={`w-full ${sidebarsVisible ? 'lg:w-[59%]' : 'lg:w-[90%] lg:mx-auto'} h-auto lg:h-full overflow-y-auto scrollbar-hide pb-6 transition-all duration-300 px-2 sm:px-4`}
+                    <div className={`w-full ${sidebarsVisible ? 'lg:w-[59%]' : 'lg:w-[100%] lg:mx-auto'} h-auto lg:h-full overflow-y-auto scrollbar-hide pb-6 transition-all duration-300 px-2 sm:px-4`}
                     >
                         <div className={`${sidebarsVisible ? 'h-[40vh] md:h-[55vh] lg:h-[65vh]' : 'h-[50vh] md:h-[70vh] lg:h-[90vh]'}`}> 
                             <WatchinCaroussel />
@@ -169,6 +173,36 @@ const Home: React.FC = () => {
                           excludeIds={shownAnimeIds}
                         />
 
+
+                        {/*Adventure Anime List list =====================================================================================*/}
+                        <section className="w-full mt-12 flex flex-col items-start justify-start">
+                          <h1 className="w-full font-fira-code text-xl lg:text-2xl font-extrabold text-neon_purple dark:text-white text-left">Boundless Journeys: Adventure Anime Expedition</h1>
+                          <p className='text-black dark:text-white font-fira-code text-sm text-left'>Embark on epic quests across uncharted lands, mystical realms, and cosmic frontiers. These adventure anime celebrate exploration, discovery, and the unbreakable bonds forged when heroes venture into the unknown.</p>
+                         
+                          <Genres data={adventureAnime} />
+
+                        </section>
+                        {/*Sci-fi Anime List list =====================================================================================*/}
+                        <section className="w-full mt-12 flex flex-col items-start justify-start">
+                          <h1 className="w-full font-fira-code text-xl lg:text-2xl font-extrabold text-neon_purple dark:text-white text-left">Cosmic Frontiers: Sci-Fi Anime Collection</h1>
+                          <p className='text-black dark:text-white font-fira-code text-sm text-left'>Explore futuristic worlds, advanced technology, and mind-bending concepts with these sci-fi anime. From cyberpunk dystopias to interstellar adventures, these series challenge reality and ignite the imagination.</p>
+                         
+                          <Genres data={sciFiAnime} />
+                        </section>
+                        {/*sports Anime List list =====================================================================================*/}
+                        <section className="w-full mt-12 flex flex-col items-start justify-start">
+                          <h1 className="w-full font-fira-code text-xl lg:text-2xl font-extrabold text-neon_purple dark:text-white text-left">Victory Rush: Sports Anime Showdown</h1>
+                          <p className='text-black dark:text-white font-fira-code text-sm text-left'>Feel the adrenaline of competition with these sports anime, where underdogs rise, teamwork triumphs, and the love of the game pushes athletes to their limits.</p>
+                         
+                          <Genres data={sportsAnime} />
+                        </section>
+
+
+
+
+
+
+               
                     </div>
 
                     {/* right side bar - visible on mobile if rightSidebarVisible, on desktop if sidebarsVisible */}
@@ -176,8 +210,8 @@ const Home: React.FC = () => {
                         <div
                           className={
                             sidebarsVisible
-                              ? 'hidden lg:flex lg:flex-col gap-2 px-4 relative pt-0 pb-[50px] lg:w-[25%] h-auto lg:h-full overflow-y-auto scrollbar-hide'
-                              : `fixed top-[90px] right-0 z-40 w-3/4 max-w-xs h-full bg-white dark:bg-dark900 shadow-lg transition-transform duration-300 ease-in-out will-change-transform lg:hidden gap-2 px-4 pt-0 pb-[50px] overflow-y-auto scrollbar-hide ${rightSidebarVisible ? 'translate-x-0' : 'translate-x-full'}`
+                              ? 'hidden lg:flex lg:flex-col gap-2 relative pt-0 pb-[50px] lg:w-[25%] h-auto lg:h-full overflow-y-auto scrollbar-hide'
+                              : `fixed top-[90px] right-0 z-40 w-3/4 max-w-xs h-full bg-white dark:bg-black shadow-lg transition-transform duration-300 ease-in-out will-change-transform lg:hidden gap-2 px-4 pt-0 pb-[50px] overflow-y-auto scrollbar-hide ${rightSidebarVisible ? 'translate-x-0' : 'translate-x-full'}`
                           }
                           style={{
                             transform: rightSidebarVisible || sidebarsVisible ? 'translateX(0)' : 'translateX(100%)',
@@ -185,11 +219,7 @@ const Home: React.FC = () => {
                           onClick={e => e.stopPropagation()}
                         >
                             {/* search (desktop only) or close button (mobile only) */}
-                            <div className="sticky top-0 pt-1 w-full z-10 pb-2 bg-white dark:bg-dark900">
-                              <form action="" className="w-full relative hidden lg:block">
-                                <input type="text" className="w-full p-2 pl-10 rounded-md bg-frost dark:bg-dark800 text-black dark:text-white focus:outline-none" />
-                                <FontAwesomeIcon icon={faSearch} className="text-neon_purple text-xl cursor-pointer hover:text-fashion_pink transition-colors absolute left-3 top-[20%]" />
-                              </form>
+                            <div className="sticky top-0 pt-1 w-full z-10 pb-2 bg-white dark:bg-black">
                               <button
                                 className="block lg:hidden ml-auto p-2 text-xl text-neon_purple hover:text-fashion_pink transition-colors"
                                 onClick={handleCloseSidebars}

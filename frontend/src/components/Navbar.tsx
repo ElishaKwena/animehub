@@ -47,11 +47,24 @@ const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </div>
               <div className="menus flex items-center justify-between gap-4">
-                <Link to="" className='text-black dark:text-white font-fira-code font-bold hover:text-fashion_pink dark:hover:text-neon_purple transition-all duration-300'>Anime</Link>
+                <Link to="/play" className='text-black dark:text-white font-fira-code font-bold hover:text-fashion_pink dark:hover:text-neon_purple transition-all duration-300'>Anime</Link>
                 <Link to="" className='text-black dark:text-white font-fira-code font-bold hover:text-fashion_pink dark:hover:text-neon_purple transition-all duration-300'>Manga</Link>
                 <Link to="" className='text-black dark:text-white font-fira-code font-bold hover:text-fashion_pink dark:hover:text-neon_purple transition-all duration-300'>Movies</Link>
               </div>
+
           </div>
+
+
+          {/* search (desktop only) or close button (mobile only) */}
+          <div className="w-[500px] z-10 bg-white dark:bg-black">
+                <form action="" className="w-full relative hidden lg:block">
+                  <input type="text" className="w-full p-2 pl-10 rounded-md bg-frost dark:bg-dark800 text-black dark:text-white focus:outline-none" />
+                  <FontAwesomeIcon icon={faSearch} className="text-neon_purple text-xl cursor-pointer hover:text-fashion_pink transition-colors absolute left-3 top-[20%]" />
+                </form>
+            </div>
+
+
+
           <div className="right-nav flex items-center justify-between lg:justify-end gap-10 w-full lg:w-1/4">
               <div className="menus flex items-center justify-start lg:hidden gap-4">
                   <button

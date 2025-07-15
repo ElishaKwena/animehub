@@ -11,7 +11,7 @@ import {
     faBookmark
   } from "@fortawesome/free-solid-svg-icons";
 
-interface MostpopularProps{
+interface SuggestionCardProps{
   name:string;
   banner:string;
   description:string;
@@ -22,14 +22,14 @@ interface MostpopularProps{
   seasons:number;
   episodes:number;
 }
-const MostPopularCard:React.FC<MostpopularProps> =({name,banner,description, rating, sub, dub, views, seasons, episodes})=>{
+const SuggestionCard:React.FC<SuggestionCardProps> =({name,banner,description, rating, sub, dub, views, seasons, episodes})=>{
     const [hovered, setHovered] = useState(false);
 
     const formattedViews = useFormatNumber(views); 
     return(
         <>
         <div 
-          className="anime-card w-[240px] rounded-md flex flex-col gap-2 p-0 relative max-h-[340px]"
+          className="anime-card w-[200px] rounded-md flex flex-col gap-2 p-0 relative max-h-[300px]"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
@@ -97,4 +97,4 @@ const MostPopularCard:React.FC<MostpopularProps> =({name,banner,description, rat
         </>
     )
 }
-export default MostPopularCard;
+export default SuggestionCard;
