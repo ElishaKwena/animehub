@@ -98,3 +98,5 @@ const SuggestionCard:React.FC<SuggestionCardProps> =({name,banner,description, r
     )
 }
 export default SuggestionCard;
+
+
