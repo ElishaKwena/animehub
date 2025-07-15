@@ -6,6 +6,8 @@ import Suggestion from "../ContentsComponents/Suggestion";
 
 import { suggestionAnime } from "../../data/Recommended/Suggestion";
 
+// https://drive.google.com/file/d/1epBu-VCH3tOcVYr1kQBrTCKcczxrcns0/view?usp=sharing
+
 // ffmpeg -i "input.ts" -c copy "output.mp4"
 
 const animedata={
@@ -58,7 +60,7 @@ const Play:React.FC = () =>{
                 <div className={`playcontainer w-full bg:frost dark:bg-black ${sidebarsVisible ? 'h-[65vh]' : 'lg:h-[80vh]'}`}> 
                     <PlayContainer videosrc={videosrc} />
                 </div>
-                <div className="episodes w-full flex flex-col items-center justify-start mt-4 bg-frost dark-bg-dark800 p-2 rounded-md shadow-xl">
+                <div className="episodes w-full flex flex-col items-center justify-start mt-4 bg-frost dark:bg-dark800 p-2 rounded-md shadow-xl">
                     <div className="w-full flex items-center justify-start gap-2">
                         {animedata.sub && <button className="text-white font-fira-code py-1 p-2 bg-neon_purple hover:bg-fashion_pink transition-all duration-300 rounded-md">SUB</button>}
                         {animedata.dub && <button className="text-white font-fira-code py-1 p-2 bg-neon_purple hover:bg-fashion_pink transition-all duration-300 rounded-md">DUB</button>}
@@ -70,7 +72,7 @@ const Play:React.FC = () =>{
                             {animedata.seasons.map((season, idx) => (
                                 <button
                                 key={season.id}
-                                className={`flex items-center justify-center bg-chrome dark:bg-dark700 w-8 h-6 hover:bg-neon_purple transition-all duration-300 rounded-sm text-white font-fira-code ${currentSeasonIndex === idx ? "bg-fashion_pink" : ""}`}
+                                className={`flex items-center justify-center bg-chrome dark:bg-dark700 w-8 h-6 hover:bg-neon_purple dark:hover:bg-neon_purple transition-all duration-300 rounded-sm text-white font-fira-code ${currentSeasonIndex === idx ? "bg-fashion_pink dark:bg-fashion_pink" : ""}`}
                                 onClick={() => setCurrentSeasonIndex(idx)}
                                 >{season.season}</button>
                             ))}
@@ -83,7 +85,7 @@ const Play:React.FC = () =>{
                         {Array.from({ length: currentSeason.episodes }, (_, i) => (
                             <button
                             key={i + 1}
-                            className="flex items-center justify-center bg-chrome dark:bg-dark700 hover:bg-neon_purple transition-all duration-300 w-8 h-6 rounded-sm text-white font-fira-code"
+                            className="flex items-center justify-center bg-chrome dark:bg-dark700 dark:hover:bg-neon_purple hover:bg-neon_purple transition-all duration-300 w-8 h-6 rounded-sm text-white font-fira-code"
                             >
                                 {i + 1}
                             </button>
