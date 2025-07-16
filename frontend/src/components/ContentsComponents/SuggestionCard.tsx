@@ -29,7 +29,7 @@ const SuggestionCard:React.FC<SuggestionCardProps> =({name,banner,description, r
     return(
         <>
         <div 
-          className="anime-card w-[200px] rounded-md flex flex-col gap-2 p-0 relative max-h-[300px]"
+          className="anime-card w-[190px] lg:w-[200px] rounded-md flex flex-col gap-2 p-0 relative max-h-[340px] lg:max-h-[300px]"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >

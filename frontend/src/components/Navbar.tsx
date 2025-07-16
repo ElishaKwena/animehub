@@ -56,8 +56,8 @@ const Navbar: React.FC<NavbarProps> = ({
 
 
           {/* search (desktop only) or close button (mobile only) */}
-          <div className="w-[500px] z-10 bg-white dark:bg-black">
-                <form action="" className="w-full relative hidden lg:block">
+          <div className="w-[500px] z-10 bg-white dark:bg-black hidden lg:block">
+                <form action="" className="w-full relative ">
                   <input type="text" className="w-full p-2 pl-10 rounded-md bg-frost dark:bg-dark800 text-black dark:text-white focus:outline-none" />
                   <FontAwesomeIcon icon={faSearch} className="text-neon_purple text-xl cursor-pointer hover:text-fashion_pink transition-colors absolute left-3 top-[20%]" />
                 </form>
